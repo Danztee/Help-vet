@@ -7,6 +7,11 @@ const dotContainer = document.querySelector(".dots");
 
 let curSlide = 0;
 const maxSlide = slides.length;
+let isDragging = false;
+startPos = 0;
+currentTranslate = 0;
+prevTranslate = 0;
+currentindex = 0;
 
 const createDots = function () {
   slides.forEach(function (_, i) {
@@ -29,7 +34,36 @@ const activateDot = function (slide) {
 
 slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
+
+  // touch events
+  slide.addEventListener("touchstart", touchStart(index));
+  slide.addEventListener("touchend", touchEnd);
+  slide.addEventListener("touchmove", touchMove);
 });
+
+function getPositionX(event) {
+  return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
+}
+
+function touchStart(index) {
+  return function (event) {
+    currentindex = index;
+    startPos = getPositionX(event);
+    isDragging = true;
+  };
+}
+
+function touchMove(event) {
+  if (isDragging) {
+    const currentPosition = getPositionX(event);
+    currentTranslate = prevTranslate + currentPosition - startPos;
+  }
+}
+
+function touchEnd() {
+  isDragging = false;
+  const movedBy = currentTranslate - prevTranslate;
+}
 
 const goToSlide = function () {
   slides.forEach((slide) => {
@@ -78,3 +112,26 @@ dotContainer.addEventListener("click", function (e) {
     activateDot(slide);
   }
 });
+
+slides.forEach(function (slide) {
+  slide.addEventListener("touchstart", goToSlide);
+});
+
+// Set up events
+// var slider = document.querySelector(".slider")[0];
+
+// slides.forEach(slid, () => {});
+
+// slides.addEventListener("touchmove", goToSlide, false);
+
+// if (xDiff > 0) {
+//   /* left swipe */
+//   slideRight();
+// } else {
+//   /* right swipe */
+//   slideLeft();
+// }
+
+// slides.forEach(function (slide, index) {
+//   slide.addEventListener("touchstart", goToSlide, false);
+// });
