@@ -1,0 +1,86 @@
+.doctors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 5rem;
+  padding: 5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.doctors .swiper#swiper {
+  margin-top: 5rem;
+  width: 100%;
+  margin-bottom: -20rem;
+  height: 370px;
+
+  @media only screen and (max-width: 1200px) {
+    height: 300px;
+  }
+
+  .img-swiper {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .swiper #nav-btn {
+    color: #c4c1c1;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 35%;
+  }
+
+  .swiper-slide {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: url(../img/backpac.png);
+      position: absolute;
+      top: -11.75rem;
+      margin-right: 21.5rem;
+      line-height: 1;
+      font-size: 20rem;
+      z-index: -1;
+    }
+
+    &::after {
+      content: url(../img/backpac.png);
+      position: absolute;
+      bottom: 9.6rem;
+      margin-left: 21.5rem;
+      line-height: 1;
+      font-size: 20rem;
+      z-index: -1;
+    }
+  }
+
+  #nav-btn {
+    color: #c4c1c1;
+  }
+
+  .name {
+    text-align: start;
+    position: absolute;
+    margin-left: -14.5rem;
+    bottom: 3rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.stats {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 1rem;
+  }
+
+  .each {
+    @media only screen and (max-width: $bp-small) {
+      padding: 2rem;
+      justify-content: center;
+    }
+  }
+
+  p {
+    color: #969a99;
+  }
+}

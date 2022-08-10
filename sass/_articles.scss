@@ -1,0 +1,149 @@
+.article {
+  margin-top: 7rem;
+  text-align: center;
+
+  background-color: $color-primary;
+  height: 40em;
+
+  @media only screen and (max-width: 587px) {
+    height: 62em;
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: 85em;
+  }
+
+  .head {
+    padding: 5rem;
+    color: #fff;
+  }
+
+  .card-pic {
+    width: 13rem;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 3.5rem;
+  }
+
+  #card {
+    margin-top: 0;
+  }
+
+  #card-col {
+    margin-top: 5rem;
+
+    .card-text,
+    .card-title {
+      text-align: center;
+    }
+
+    .card {
+      padding: 0 0;
+      padding-bottom: 4rem;
+      border-radius: 0;
+    }
+
+    @media only screen and (max-width: 500px) {
+      &:not(:nth-child(1)) {
+        margin-top: 10rem;
+      }
+    }
+
+    @media only screen and (max-width: 587px) {
+      &:last-child {
+        margin-top: 10rem;
+      }
+    }
+  }
+}
+
+// newsletter
+.newsletter {
+  margin-top: 5rem;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .letter {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 20em;
+    padding: 0 5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      height: 10rem;
+    }
+  }
+
+  .textarea {
+    grid-column: 1/5;
+    position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #text {
+      width: 80%;
+      height: 7rem;
+      padding: 1rem;
+    }
+
+    #text,
+    .btn {
+      font-size: 1.7rem;
+      background-color: transparent;
+      border-radius: 0;
+      outline: none;
+      border: none;
+      border: 1px solid $color-secondary;
+    }
+
+    .btn {
+      position: absolute;
+      padding: 1.6rem;
+      width: 12rem;
+      right: 11%;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+
+      @media only screen and (max-width: $bp-medium) {
+        padding: 1rem;
+        width: 11rem;
+        right: 12%;
+      }
+
+      &:hover {
+        background-color: $color-primary;
+        color: #fff;
+      }
+    }
+  }
+
+  .pic {
+    grid-column: 5/7;
+    z-index: -1;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+
+    .news-img {
+      width: 100%;
+    }
+  }
+}

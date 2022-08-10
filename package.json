@@ -1,0 +1,11 @@
+{
+  "name": "help-vet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "swiper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

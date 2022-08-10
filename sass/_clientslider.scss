@@ -1,0 +1,198 @@
+.client {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 20rem;
+  padding: 5rem;
+
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* SLIDER */
+
+.slider-container {
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 24rem;
+  }
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 5rem 0;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+  }
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+
+  @media only screen and (max-width: 830px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.slider {
+  transform: translateX(0%);
+}
+
+/* TESTIMONIALS */
+
+.testimonial__header {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial__text {
+  font-size: 1.7rem;
+  margin-top: 3.5rem;
+  color: #666;
+  margin: 0 3rem;
+  position: relative;
+  overflow: visible;
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 10rem;
+    margin-top: 5rem;
+    text-align: start;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    height: 15rem;
+  }
+
+  &::before {
+    content: url(../img/quoteup.png);
+    position: absolute;
+    top: -5rem;
+    left: 42%;
+    line-height: 1;
+    z-index: 1;
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: url(../img/quotedown.png);
+    position: absolute;
+    top: 15rem;
+    left: 43%;
+    line-height: 1;
+    z-index: 1;
+    overflow: visible;
+
+    @media only screen and (max-width: 830px) {
+      margin-top: -4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 0;
+    margin: 0;
+    margin-left: 3rem;
+  }
+}
+
+.testimonial__author {
+  font-style: normal;
+}
+
+.testimonial {
+  display: flex;
+  align-content: center;
+  padding: 5rem 3.5rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1000px) {
+    text-align: start;
+  }
+}
+
+.testimonial__name {
+  font-size: 1.7rem;
+  font-weight: 500;
+  align-self: end;
+  margin: 0;
+  margin-top: 1rem;
+  color: $color-primary;
+}
+
+.testimonial__photo {
+  min-width: 12rem;
+  position: relative;
+  bottom: 2rem;
+  height: 158px;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 100px;
+    bottom: 0;
+    top: 1.5rem;
+  }
+
+  &--test {
+    border-radius: 40px 0px;
+  }
+}
+
+.slide {
+  transform: translateX(0%);
+}
+
+.slider__btn {
+  width: 20rem;
+}
+
+// dots
+.dots {
+  position: relative;
+  top: 4rem;
+
+  @media only screen and (max-width: $bp-small) {
+    top: 0;
+  }
+}
+
+.dots__dot {
+  border: none;
+  background-color: grey;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: $color-primary;
+  opacity: 1;
+}

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/0d63ab44ae.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="sass/main.css" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <title>HelpVet</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg p-4">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <img src="img/HelpVET.png" alt="logo" class="navbar-brand" id="logo" />
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-outline-success" type="submit" id="btn">
+          Register
+        </button>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header class="header">
+      <div class="header__content">
+        <h1 class="heading-1">
+          Get <span style="color: #00d7ff">maximum</span> and
+          <span style="color: #127d60">affordable care</span>
+          for your pets
+        </h1>
+        <p class="header__text">
+          Take care of your pet,never leave them sick and weak .we are here to
+          help you treat your pets and help them grow.
+        </p>
+        <a href="http://">Book appointment &rarr;</a>
+      </div>
+      <div class="header__picture">
+        <img
+          src="img/image-2.png"
+          alt="couple with new house"
+          class="header__img--1"
+        />
+      </div>
+    </header>
+    <!-- header -->
+    <!-- stats -->
+    <section class="stats">
+      <div class="each">
+        <h1>25k+</h1>
+        <p>Clients</p>
+      </div>
+      <div class="each">
+        <h1>75+</h1>
+        <p>Consultants</p>
+      </div>
+      <div class="each">
+        <h1>100k+</h1>
+        <p>Registered pet</p>
+      </div>
+      <div class="each">
+        <h1>95%+</h1>
+        <p>Customer satisfaction</p>
+      </div>
+    </section>
+    <!-- stats ends here -->
+    <!-- about start here -->
+    <article class="about">
+      <div class="about__picture">
+        <img
+          src="img/image3.png"
+          alt="couple with new house"
+          class="about__img--1"
+        />
+      </div>
+
+      <div class="about__content">
+        <h1 class="head">ABOUT US</h1>
+        <div class="about__each">
+          <div class="big">
+            <div class="list__box back--1">
+              <img src="img/Vector(3).png" alt="" />
+            </div>
+          </div>
+          <h1>Take care of your pet</h1>
+          <p class="about__text">
+            Take care of your pet, never leave them sick and weak .we are here
+            to help you treat your pets and help them grow.
+          </p>
+        </div>
+        <div class="about__each">
+          <div class="big">
+            <div class="list__box back--2">
+              <img src="img/Vector(4).png" alt="" />
+            </div>
+          </div>
+          <h1>Take care of your pet</h1>
+          <p class="about__about__text">
+            Take care of your pet, never leave them sick and weak .we are here
+            to help you treat your pets and help them grow.
+          </p>
+        </div>
+        <div class="about__each">
+          <div class="big">
+            <div class="list__box back--3">
+              <img src="img/Vector(5).png" alt="" />
+            </div>
+          </div>
+          <h1>Take care of your pet</h1>
+          <p class="about__text">
+            Take care of your pet, never leave them sick and weak .we are here
+            to help you treat your pets and help them grow.
+          </p>
+        </div>
+      </div>
+    </article>
+    <!-- about ends here -->
+    <!-- services -->
+
+    <section class="services">
+      <h1 class="heading-1">Our Services</h1>
+      <p>we offer quality and affordable health services to your pets</p>
+
+      <!-- cards -->
+      <div class="row" id="card">
+        <div class="col-sm-4" id="card-col">
+          <div class="card mb-4 border-0">
+            <div class="card-body">
+              <div class="bigup">
+                <div class="list__box-2 back--2">
+                  <img src="img/Vector.png" alt="" class="card-pic" />
+                </div>
+              </div>
+              <h5 class="card-title">24HRS Consultation</h5>
+              <p class="card-text">
+                Take care of your pet, never leave them sick and weak .we are
+                here to help you treat your pets .
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4" id="card-col">
+          <div class="card mb-4 border-0">
+            <div class="card-body">
+              <div class="bigup">
+                <div class="list__box-2 back--3">
+                  <img src="img/Vector(1).png" alt="" class="card-pic" />
+                </div>
+              </div>
+              <h5 class="card-title">Effective health care</h5>
+              <p class="card-text">
+                Take care of your pet, never leave them sick and weak .we are
+                here to help you treat your pets .
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4" id="card-col">
+          <div class="card mb-4 border-0">
+            <div class="card-body">
+              <div class="bigup">
+                <div class="list__box-2 back--4">
+                  <img src="img/Vector(2).png" alt="" class="card-pic" />
+                </div>
+              </div>
+              <h5 class="card-title">Affordable healthcare</h5>
+              <p class="card-text">
+                Take care of your pet, never leave them sick and weak .we are
+                here to help you treat your pets .
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- cards ends here -->
+    </section>
+    <!-- services end here -->
+    <!-- doctors -->
+    <section class="doctors">
+      <h1 class="heading-1">Know our doctors</h1>
+      <p>we offer quality and affordable health services to your pets</p>
+
+      <!-- slider -->
+      <div class="swiper" id="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              src="./img/person5.png"
+              alt=""
+              class="img-swiper"
+              id="swiper-slide"
+            />
+            <div class="name">
+              <h1>Khalid maha</h1>
+              <p>Genral</p>
+              <button
+                class="btn btn-outline-success"
+                type="submit"
+                id="btn"
+                style="width: 9rem"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/person6.png"
+              alt=""
+              class="img-swiper"
+              id="swiper-slide"
+            />
+            <div class="name">
+              <h1>Elena jones</h1>
+              <p>Surgical</p>
+              <button
+                class="btn btn-outline-success"
+                type="submit"
+                id="btn"
+                style="width: 9rem"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./img/person7.png"
+              alt=""
+              class="img-swiper"
+              id="swiper-slide"
+            />
+            <div class="name">
+              <h1>Richard kayy</h1>
+              <p>Gynacology</p>
+              <button
+                class="btn btn-outline-success"
+                type="submit"
+                id="btn"
+                style="width: 9rem"
+              >
+                View Profile
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev" id="nav-btn"></div>
+        <div class="swiper-button-next" id="nav-btn"></div>
+      </div>
+    </section>
+    <!-- doctors end here -->
+
+    <!-- client -->
+    <div class="client">
+      <h1 class="heading-1">What our clients are saying</h1>
+      <p>Our clients our voice</p>
+
+      <!-- slider -->
+      <div class="slider-container">
+        <div class="slider big-1">
+          <div class="slider--1">
+            <div class="testimonial">
+              <img src="img/curve1.png" alt="" class="testimonial__photo" />
+              <blockquote class="testimonial__text">
+                Take care of your pet, never leave them sick and weak. we are
+                here to help you treat your pets
+
+                <h6 class="testimonial__name">Lara George</h6>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="slider--2">
+            <div class="testimonial">
+              <img
+                src="img/slider.jpg"
+                alt=""
+                class="testimonial__photo testimonial__photo--test"
+              />
+
+              <blockquote class="testimonial__text">
+                Take care of your pet, never leave them sick and weak. we are
+                here to help you treat your pets
+
+                <h6 class="testimonial__name">Aarav Lynn</h6>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider big-2">
+          <div class="slider--3">
+            <div class="testimonial">
+              <img src="img/curve2.png" alt="" class="testimonial__photo" />
+              <blockquote class="testimonial__text">
+                Take care of your pet, never leave them sick and weak. we are
+                here to help you treat your pets
+
+                <h6 class="testimonial__name">David Brown</h6>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="slider--4">
+            <div class="testimonial">
+              <img
+                src="img/slider1.jpg"
+                alt=""
+                class="testimonial__photo testimonial__photo--test"
+              />
+
+              <blockquote class="testimonial__text">
+                Take care of your pet, never leave them sick and weak. we are
+                here to help you treat your pets
+
+                <h6 class="testimonial__name">louis rain</h6>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider big-3">
+          <div class="slider--5">
+            <div class="testimonial">
+              <img
+                src="img/slider2.jpg"
+                alt=""
+                class="testimonial__photo testimonial__photo--test"
+              />
+              <blockquote class="testimonial__text">
+                Take care of your pet, never leave them sick and weak. we are
+                here to help you treat your pets
+
+                <h6 class="testimonial__name">Will Smith</h6>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="slider--6">
+            <div class="testimonial">
+              <img
+                src="img/slider3.jpg"
+                alt=""
+                class="testimonial__photo testimonial__photo--test"
+              />
+
+              <blockquote class="testimonial__text">
+                Take care of your pet, never leave them sick and weak. we are
+                here to help you treat your pets
+
+                <h6 class="testimonial__name">Daniel Rogers</h6>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dots"></div>
+    </div>
+    <!-- clients  ends-->
+
+    <!-- articles start here -->
+    <div class="article">
+      <div class="head">
+        <h1 class="heading-1">Latest articles</h1>
+        <p>Letest news and trend in the health sector</p>
+      </div>
+
+      <div class="row" id="card">
+        <div class="col-sm-4" id="card-col">
+          <div class="card mb-4 border-0">
+            <div class="card-body">
+              <div class="bigup">
+                <img src="img/article1.png" alt="" class="card-pic" />
+              </div>
+              <h5 class="card-title">
+                Reasons why children should avoid cofee
+              </h5>
+              <p class="card-text">
+                12 rules of a balanced health 12 rules of a balanced health 12
+                rules of a balanced health
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4" id="card-col">
+          <div class="card mb-4 border-0">
+            <div class="card-body">
+              <div class="bigup">
+                <img src="img/article-3.png" alt="" class="card-pic" />
+              </div>
+              <h5 class="card-title">12 rules of a balanced health</h5>
+              <p class="card-text">
+                12 rules of a balanced health 12 rules of a balanced health 12
+                rules of a balanced health
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4" id="card-col">
+          <div class="card mb-4 border-0">
+            <div class="card-body">
+              <div class="bigup">
+                <img src="img/article-2.png" alt="" class="card-pic" />
+              </div>
+              <h5 class="card-title">
+                A5 reasons why you should exercise daily
+              </h5>
+              <p class="card-text">
+                12 rules of a balanced health 12 rules of a balanced health 12
+                rules of a balanced health
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cards ends here -->
+
+    <!-- newsletter -->
+    <div class="newsletter">
+      <h1 class="heading-1">Join our Newsletter</h1>
+      <p>Get up to date news and information about pets</p>
+
+      <div class="letter">
+        <div class="textarea">
+          <form action="/action_page.php">
+            <input
+              type="email"
+              id="text"
+              placeholder="Enter your email"
+              required
+            />
+            <input type="submit" value="Subscribe" class="btn" />
+          </form>
+        </div>
+        <div class="pic">
+          <img src="./img/news.png" alt="" class="news-img" />
+        </div>
+      </div>
+    </div>
+    <!-- newsletter ends here -->
+    <!-- footer -->
+    <footer class="footer">
+      <div class="first-box">
+        <ul class="first">
+          <img
+            src="img/HelpVET2.png"
+            alt="logo"
+            class="navbar-brand"
+            id="logo"
+          />
+          <!-- <h6>helpvet</h6> -->
+          <li>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/iamdanztee"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+        </ul>
+        <ul class="second">
+          <h6>Services</h6>
+          <li><a href="#">home</a></li>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">services</a></li>
+        </ul>
+        <ul class="third">
+          <h6>information</h6>
+          <li><a href="#">appointment</a></li>
+          <li><a href="#">sign up</a></li>
+          <li><a href="#">join community</a></li>
+        </ul>
+        <ul class="fourth">
+          <h6>Partnership</h6>
+          <li><a href="#">about company</a></li>
+          <li><a href="#">social meida</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <div class="copy">copyright &copy; 2022. All rights reserved</div>
+    </footer>
+    <!-- footer ends here -->
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- custom js -->
+    <script defer src="swiper.js"></script>
+    <script src="slide.js"></script>
+  </body>
+</html>

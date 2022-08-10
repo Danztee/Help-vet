@@ -1,0 +1,61 @@
+.footer {
+  height: 30rem;
+  background-color: $color-secondary;
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 72rem;
+  }
+
+  .first-box {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    text-transform: capitalize;
+    line-height: 2;
+
+    @media only screen and (max-width: $bp-small) {
+      display: block;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $color-primary;
+      background-color: #fff;
+      padding: 0.5rem;
+      border-radius: 5px;
+      transform: translateX(10px);
+    }
+  }
+
+  .copy {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+  }
+
+  h6 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  ul {
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 3rem;
+    }
+  }
+}

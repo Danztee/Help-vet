@@ -1,0 +1,68 @@
+// COLOR VARIABLES
+$color-primary: #127d60;
+$color-secondary: #0a4931;
+
+$text-color-1: #120033;
+$text-color-2: #001e33;
+
+// FONT VARIABLES
+$font-primary: "Montserrat", sans-serif;
+
+// RESPONSIVE BREAKPOINT
+$bp-largest: 75em;
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 37.5em;
+
+// typography
+%heading {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 4.5rem;
+  color: $color-secondary;
+  line-height: 1.2;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 4.5rem;
+  }
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $text-color-2;
+  font-weight: 400;
+  line-height: 1.7;
+  // background-color: #f5f5f5;
+  background-image: linear-gradient(to bottom right, #f5f5f5, #fff);
+  font-size: 1.5rem;
+  overflow-x: hidden;
+}

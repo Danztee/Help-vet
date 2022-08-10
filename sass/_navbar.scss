@@ -1,0 +1,58 @@
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    display: block !important;
+  }
+  .navbar-nav {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    justify-content: space-evenly;
+    padding: 0 15rem;
+  }
+}
+
+#logo {
+  width: 8rem;
+}
+
+.active {
+  color: $color-primary !important;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    &::after {
+      content: "";
+      height: 0.7rem;
+      width: 0.7rem;
+      display: block;
+      background-color: currentColor;
+      mask-image: url(../img/Ellipse-9.png);
+      mask-size: cover;
+      align-self: center;
+    }
+  }
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: $text-color-1;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+#btn {
+  width: 8rem;
+  border-radius: 0;
+  background-color: #fff;
+  font-size: 1.5rem;
+
+  &:hover {
+    background-color: $color-primary;
+    color: #f5f5f5;
+  }
+}
