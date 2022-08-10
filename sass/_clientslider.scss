@@ -10,6 +10,10 @@
   h1 {
     font-size: 3.5rem;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 3rem;
+  }
 }
 
 /* SLIDER */
@@ -21,6 +25,7 @@
 
   @media only screen and (max-width: $bp-small) {
     height: 24rem;
+    margin-top: -5rem;
   }
 }
 
@@ -35,6 +40,7 @@
 
   @media only screen and (max-width: $bp-small) {
     padding: 0;
+    margin-top: 2rem;
   }
 
   /* THIS creates the animation! */
@@ -171,9 +177,9 @@
   position: relative;
   top: 4rem;
 
-  @media only screen and (max-width: $bp-small) {
-    top: 0;
-  }
+  // @media only screen and (max-width: $bp-small) {
+  //   top: 0;
+  // }
 }
 
 .dots__dot {
@@ -195,4 +201,8 @@
 .dots__dot--active {
   background-color: $color-primary;
   opacity: 1;
+}
+
+.grabbing {
+  cursor: grabbing;
 }

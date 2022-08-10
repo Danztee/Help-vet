@@ -1,17 +1,16 @@
 const slides = document.querySelectorAll(".slider");
-
-const btnLeft = document.querySelector(".slider__btn--left");
-const btnRight = document.querySelector(".slider__btn--right");
-
 const dotContainer = document.querySelector(".dots");
+const sliderContainer = Array.from(document.querySelectorAll("#container"));
 
 let curSlide = 0;
 const maxSlide = slides.length;
-let isDragging = false;
-startPos = 0;
-currentTranslate = 0;
-prevTranslate = 0;
-currentindex = 0;
+
+let isDragging = false,
+  startPos = 0,
+  currentTranslate = 0,
+  prevTranslate = 0,
+  animationID,
+  currentIndex = 0;
 
 const createDots = function () {
   slides.forEach(function (_, i) {
@@ -34,12 +33,30 @@ const activateDot = function (slide) {
 
 slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
+});
+
+slides.forEach(function (slide, index) {
+  const slideImage = slide.querySelector("img");
+  slideImage.addEventListener("dragstart", (e) => e.preventDefault());
 
   // touch events
   slide.addEventListener("touchstart", touchStart(index));
   slide.addEventListener("touchend", touchEnd);
   slide.addEventListener("touchmove", touchMove);
+
+  // mouse events
+  // slide.addEventListener("mousedown", touchStart(index));
+  // slide.addEventListener("mouseup", touchEnd);
+  // slide.addEventListener("mouseleave", touchEnd);
+  // slide.addEventListener("mousemove", touchMove);
 });
+
+// disable context menu
+window.oncontextmenu = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  return false;
+};
 
 function getPositionX(event) {
   return event.type.includes("mouse") ? event.pageX : event.touches[0].clientX;
@@ -47,10 +64,18 @@ function getPositionX(event) {
 
 function touchStart(index) {
   return function (event) {
-    currentindex = index;
+    currentIndex = index;
     startPos = getPositionX(event);
     isDragging = true;
+    animationID = requestAnimationFrame(animation);
   };
+}
+
+function animation() {
+  sliderContainer.map((each) => {
+    each.style.transform = `translateX(${currentTranslate}px)`;
+    if (isDragging) requestAnimationFrame(animation);
+  });
 }
 
 function touchMove(event) {
@@ -61,8 +86,21 @@ function touchMove(event) {
 }
 
 function touchEnd() {
+  cancelAnimationFrame(animationID);
   isDragging = false;
   const movedBy = currentTranslate - prevTranslate;
+
+  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1;
+  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+  setPositionByIndex();
+  // sliderContainer.classList.remove("grabbing");
+}
+
+function setPositionByIndex() {
+  currentTranslate = currentIndex * -window.innerWidth;
+  curSlide = currentIndex;
+  goToSlide(curSlide);
+  activateDot(curSlide);
 }
 
 const goToSlide = function () {
@@ -85,8 +123,8 @@ function nextSlide() {
 
 // prev slide
 function prevSlide() {
-  if (curSlide === 0) {
-    curSlide = maxSlide - 1;
+  if (curSlide === maxSlide) {
+    curSlide = 0;
   } else {
     curSlide--;
   }
@@ -96,10 +134,11 @@ function prevSlide() {
 }
 
 const init = function () {
-  //   goToSlide(0);
+  // goToSlide(0);
   createDots();
   activateDot(0);
 };
+
 init();
 
 // event handlers
@@ -109,29 +148,17 @@ dotContainer.addEventListener("click", function (e) {
     slide = +slide;
     curSlide = slide;
     goToSlide(curSlide);
-    activateDot(slide);
+    activateDot(curSlide);
   }
 });
 
-slides.forEach(function (slide) {
-  slide.addEventListener("touchstart", goToSlide);
-});
+function autoSlide() {
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else curSlide++;
 
-// Set up events
-// var slider = document.querySelector(".slider")[0];
+  goToSlide(curSlide);
+  activateDot(curSlide);
+}
 
-// slides.forEach(slid, () => {});
-
-// slides.addEventListener("touchmove", goToSlide, false);
-
-// if (xDiff > 0) {
-//   /* left swipe */
-//   slideRight();
-// } else {
-//   /* right swipe */
-//   slideLeft();
-// }
-
-// slides.forEach(function (slide, index) {
-//   slide.addEventListener("touchstart", goToSlide, false);
-// });
+// setInterval(autoSlide, 5000);

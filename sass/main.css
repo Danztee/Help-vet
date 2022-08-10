@@ -438,6 +438,7 @@ body {
 .doctors .swiper#swiper .swiper-button-prev {
   position: absolute;
   top: 35%;
+  padding: 0 4rem;
 }
 .doctors .swiper#swiper .swiper-slide {
   padding: 1rem 0;
@@ -489,6 +490,11 @@ body {
 .client h1 {
   font-size: 3.5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .client {
+    padding: 3rem;
+  }
+}
 
 /* SLIDER */
 .slider-container {
@@ -499,6 +505,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .slider-container {
     height: 24rem;
+    margin-top: -5rem;
   }
 }
 
@@ -516,6 +523,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .slider {
     padding: 0;
+    margin-top: 2rem;
   }
 }
 @media only screen and (max-width: 830px) {
@@ -653,11 +661,6 @@ body {
   position: relative;
   top: 4rem;
 }
-@media only screen and (max-width: 37.5em) {
-  .dots {
-    top: 0;
-  }
-}
 
 .dots__dot {
   border: none;
@@ -678,6 +681,11 @@ body {
 .dots__dot--active {
   background-color: #127d60;
   opacity: 1;
+}
+
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .article {
