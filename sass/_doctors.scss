@@ -39,7 +39,10 @@
   .swiper-button-prev {
     position: absolute;
     top: 35%;
-    padding: 0 4rem;
+
+    @media only screen and (max-width: 600px) {
+      padding: 0 4rem;
+    }
   }
 
   .swiper-slide {

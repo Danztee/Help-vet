@@ -34,6 +34,11 @@
   height: 25rem;
 
   @media only screen and (max-width: 500px) {
+    width: fit-content;
+    padding: 8rem;
+  }
+
+  @media only screen and (max-width: 500px) {
     &:not(:nth-child(1)) {
       margin-top: 2rem;
     }
@@ -52,6 +57,12 @@
     align-self: center;
     padding: 1rem;
     box-shadow: 10px 10px 10px rgba(18, 125, 96, 0.03);
+
+    .card-body {
+      @media screen and (max-width: 500px) {
+        padding-bottom: 5rem;
+      }
+    }
   }
 
   .card-title {

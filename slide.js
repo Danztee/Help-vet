@@ -97,7 +97,7 @@ function touchEnd() {
 }
 
 function setPositionByIndex() {
-  currentTranslate = currentIndex * -window.innerWidth;
+  currentTranslate = currentIndex * window.innerWidth;
   curSlide = currentIndex;
   goToSlide(curSlide);
   activateDot(curSlide);
@@ -161,4 +161,4 @@ function autoSlide() {
   activateDot(curSlide);
 }
 
-// setInterval(autoSlide, 5000);
+// setInterval(autoSlide, 3000);

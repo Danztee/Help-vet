@@ -10,7 +10,7 @@
   }
 
   @media only screen and (max-width: 500px) {
-    height: 85em;
+    height: 92em;
   }
 
   .head {
@@ -20,6 +20,10 @@
 
   .card-pic {
     width: 13rem;
+
+    @media screen and (max-width: 500px) {
+      width: 19rem;
+    }
   }
 
   h1 {
@@ -29,6 +33,12 @@
 
   #card {
     margin-top: 0;
+
+    .card-body {
+      @media screen and (max-width: 500px) {
+        width: 30rem;
+      }
+    }
   }
 
   #card-col {
@@ -43,17 +53,22 @@
       padding: 0 0;
       padding-bottom: 4rem;
       border-radius: 0;
+
+      @media screen and (max-width: 500px) {
+        padding: 0 17rem;
+        height: 25em;
+      }
     }
 
     @media only screen and (max-width: 500px) {
       &:not(:nth-child(1)) {
-        margin-top: 10rem;
+        margin-top: 15rem;
       }
     }
 
     @media only screen and (max-width: 587px) {
       &:last-child {
-        margin-top: 10rem;
+        margin-top: 15rem;
       }
     }
   }

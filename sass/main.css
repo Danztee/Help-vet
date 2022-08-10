@@ -217,6 +217,7 @@ body {
 @media only screen and (max-width: 50em) {
   .about__each {
     margin-left: 8rem;
+    margin-bottom: 2rem;
   }
 }
 .about .head {
@@ -337,6 +338,14 @@ body {
   height: 25rem;
 }
 @media only screen and (max-width: 500px) {
+  #card-col {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 8rem;
+  }
+}
+@media only screen and (max-width: 500px) {
   #card-col:not(:nth-child(1)) {
     margin-top: 2rem;
   }
@@ -353,6 +362,11 @@ body {
   align-self: center;
   padding: 1rem;
   box-shadow: 10px 10px 10px rgba(18, 125, 96, 0.03);
+}
+@media screen and (max-width: 500px) {
+  #card-col .card .card-body {
+    padding-bottom: 5rem;
+  }
 }
 #card-col .card-title {
   font-weight: bold;
@@ -438,7 +452,12 @@ body {
 .doctors .swiper#swiper .swiper-button-prev {
   position: absolute;
   top: 35%;
-  padding: 0 4rem;
+}
+@media only screen and (max-width: 600px) {
+  .doctors .swiper#swiper .swiper-button-next,
+.doctors .swiper#swiper .swiper-button-prev {
+    padding: 0 4rem;
+  }
 }
 .doctors .swiper#swiper .swiper-slide {
   padding: 1rem 0;
@@ -701,7 +720,7 @@ body {
 }
 @media only screen and (max-width: 500px) {
   .article {
-    height: 85em;
+    height: 92em;
   }
 }
 .article .head {
@@ -711,12 +730,22 @@ body {
 .article .card-pic {
   width: 13rem;
 }
+@media screen and (max-width: 500px) {
+  .article .card-pic {
+    width: 19rem;
+  }
+}
 .article h1 {
   color: #fff;
   font-size: 3.5rem;
 }
 .article #card {
   margin-top: 0;
+}
+@media screen and (max-width: 500px) {
+  .article #card .card-body {
+    width: 30rem;
+  }
 }
 .article #card-col {
   margin-top: 5rem;
@@ -730,14 +759,20 @@ body {
   padding-bottom: 4rem;
   border-radius: 0;
 }
+@media screen and (max-width: 500px) {
+  .article #card-col .card {
+    padding: 0 17rem;
+    height: 25em;
+  }
+}
 @media only screen and (max-width: 500px) {
   .article #card-col:not(:nth-child(1)) {
-    margin-top: 10rem;
+    margin-top: 15rem;
   }
 }
 @media only screen and (max-width: 587px) {
   .article #card-col:last-child {
-    margin-top: 10rem;
+    margin-top: 15rem;
   }
 }
 
@@ -834,6 +869,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .footer {
     height: 72rem;
+    margin-top: 5rem;
   }
 }
 .footer .first-box {
