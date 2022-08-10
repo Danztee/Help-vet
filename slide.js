@@ -40,9 +40,9 @@ slides.forEach(function (slide, index) {
   slideImage.addEventListener("dragstart", (e) => e.preventDefault());
 
   // touch events
-  slide.addEventListener("touchstart", touchStart(index));
-  slide.addEventListener("touchend", touchEnd);
-  slide.addEventListener("touchmove", touchMove);
+  // slide.addEventListener("touchstart", touchStart(index));
+  // slide.addEventListener("touchend", touchEnd);
+  // slide.addEventListener("touchmove", touchMove);
 
   // mouse events
   // slide.addEventListener("mousedown", touchStart(index));
@@ -161,4 +161,4 @@ function autoSlide() {
   activateDot(curSlide);
 }
 
-// setInterval(autoSlide, 3000);
+setInterval(autoSlide, 5000);
